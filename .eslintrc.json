@@ -1,0 +1,40 @@
+{
+  "root": true,
+  "env": { "browser": true, "es2020": true },
+  "extends": [
+    "universe",
+    "plugin:react-hooks/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      {
+        "enableDangerousAutofixThisMayCauseInfiniteLoops": true
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all"
+      }
+    ],
+    "no-console": "error",
+    "no-debugger": "error",
+    "no-dupe-keys": "error",
+    "no-eval": "error",
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["*../**"]
+      }
+    ],
+    "no-useless-catch": "off",
+    "no-redeclare": "off",
+    "@typescript-eslint/no-redeclare": "off"
+  },
+  "plugins": ["unused-imports"]
+}
