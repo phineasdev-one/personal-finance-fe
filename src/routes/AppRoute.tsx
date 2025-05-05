@@ -13,7 +13,6 @@ const protectedLayout = (
   </RequiredAuth>
 );
 
-/** Application router */
 export const AppRouter: React.FC = () => {
   const dispatch = useAppDispatch();
 

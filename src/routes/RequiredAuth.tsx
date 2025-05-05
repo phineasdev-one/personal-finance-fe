@@ -4,7 +4,6 @@ import { Navigate, useLocation } from "react-router-dom";
 import { pagesPath } from "@/utils/path";
 import { useAppSelector } from "@/hooks/hooks";
 
-/** Required auth */
 const RequiredAuth: FC<PropsWithChildren> = ({ children }) => {
   const authState = useAppSelector((state) => state.auth);
 
