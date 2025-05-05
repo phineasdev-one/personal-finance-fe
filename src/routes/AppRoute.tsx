@@ -5,10 +5,11 @@ import { pagesPath } from "@/utils/path";
 import RequiredAuth from "./RequiredAuth";
 import { useAppDispatch } from "@/hooks/hooks";
 import { loadToken } from "@/redux/slice/authSlice";
+import { MainLayout } from "@/components/layout";
 
 const protectedLayout = (
   <RequiredAuth>
-    <>Main layout</>
+    <MainLayout />
   </RequiredAuth>
 );
 

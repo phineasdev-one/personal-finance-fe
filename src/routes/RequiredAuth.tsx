@@ -14,7 +14,7 @@ const RequiredAuth: FC<PropsWithChildren> = ({ children }) => {
     return <Navigate to={pagesPath.dashboard.url} replace />;
   }
 
-  return authState.authenticated ? children : <Navigate to={pagesPath.login.url} replace />;
+  return !authState.authenticated ? children : <Navigate to={pagesPath.login.url} replace />;
 };
 
 export default RequiredAuth;
