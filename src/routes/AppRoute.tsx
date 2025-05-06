@@ -6,6 +6,7 @@ import RequiredAuth from "./RequiredAuth";
 import { useAppDispatch } from "@/hooks/hooks";
 import { loadToken } from "@/redux/slice/authSlice";
 import { MainLayout } from "@/components/layout";
+import { LoginPage, SignUpPage } from "@/components/pages";
 
 const protectedLayout = (
   <RequiredAuth>
@@ -24,7 +25,8 @@ export const AppRouter: React.FC = () => {
     <BrowserRouter>
       <Routes>
         <Route path={pagesPath.dashboard.url} element={protectedLayout}></Route>
-        <Route path={pagesPath.login.url} element={<>Login</>} />
+        <Route path={pagesPath.login.url} element={<LoginPage />} />
+        <Route path={pagesPath.register.url} element={<SignUpPage />} />
       </Routes>
     </BrowserRouter>
   );

@@ -5,4 +5,7 @@ export const pagesPath = {
   login: {
     url: '/login',
   },
+  register: {
+    url: '/sign-up',
+  },
 };
