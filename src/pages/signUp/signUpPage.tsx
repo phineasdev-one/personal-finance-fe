@@ -4,10 +4,12 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Link } from "react-router-dom";
+import { pagesPath } from "@/utils/path";
 
-const LoginForm = () => {
+const SignUpPage = () => {
   return (
-    <div className={cn("h-screen mx-auto flex justify-center items-center flex-col gap-6")}>
+    <div className={cn("flex flex-col gap-6 h-screen mx-auto justify-center items-center")}>
       <form>
         <div className='flex flex-col gap-6'>
           <div className='flex flex-col items-center gap-2'>
@@ -17,12 +19,12 @@ const LoginForm = () => {
               </div>
               <span className='sr-only'>Finance tracker.</span>
             </a>
-            <h1 className='text-xl font-bold'>Welcome to Finance tracker.</h1>
+            <h1 className='text-xl font-bold'>Register account to Finance tracker.</h1>
             <div className='text-center text-sm'>
-              Don&apos;t have an account?{" "}
-              <a href='#' className='underline underline-offset-4'>
-                Sign up
-              </a>
+              If you have an account{" "}
+              <Link to={pagesPath.login.url} className='underline underline-offset-4'>
+                Sign in
+              </Link>
             </div>
           </div>
           <div className='flex flex-col gap-6'>
@@ -31,11 +33,19 @@ const LoginForm = () => {
               <Input id='email' type='email' placeholder='m@example.com' required />
             </div>
             <div className='grid gap-2'>
+              <Label htmlFor='email'>FullName</Label>
+              <Input id='email' type='text' placeholder='Phineas Tran' required />
+            </div>
+            <div className='grid gap-2'>
               <Label htmlFor='email'>Password</Label>
               <Input id='password' type='password' placeholder='password' required />
             </div>
+            <div className='grid gap-2'>
+              <Label htmlFor='email'>Re-Password</Label>
+              <Input id='password' type='password' placeholder='password' required />
+            </div>
             <Button type='submit' className='w-full'>
-              Login
+              Register
             </Button>
           </div>
         </div>
@@ -47,4 +57,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default SignUpPage;

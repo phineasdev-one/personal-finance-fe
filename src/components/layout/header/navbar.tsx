@@ -6,6 +6,15 @@ import NavMenu from "./navMenu";
 import Logo from "./logo";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Label } from "@/components/ui/label";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const NavBar = () => {
   return (
@@ -29,10 +38,19 @@ const NavBar = () => {
             <div className='flex ml-2.5 sm:ml-0 gap-4'>
               <Label>Welcome back, Anh</Label>
 
-              <Avatar>
-                <AvatarImage src='https://github.com/shadcn.png' />
-                <AvatarFallback>CN</AvatarFallback>
-              </Avatar>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Avatar>
+                    <AvatarImage src='https://github.com/shadcn.png' />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className='w-40'>
+                  <DropdownMenuItem>Setting</DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem>Log out</DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
 
               {/* <ModeToggle /> */}
             </div>
