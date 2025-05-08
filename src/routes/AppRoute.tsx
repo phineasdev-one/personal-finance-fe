@@ -5,14 +5,15 @@ import { pagesPath } from "@/utils/path";
 import RequiredAuth from "./RequiredAuth";
 import { useAppDispatch } from "@/hooks/hooks";
 import { loadToken } from "@/redux/slice/authSlice";
+import { MainLayout } from "@/components/layout";
+import { HomePage, LoginPage, SignUpPage } from "@/pages";
 
 const protectedLayout = (
   <RequiredAuth>
-    <>Main layout</>
+    <MainLayout />
   </RequiredAuth>
 );
 
-/** Application router */
 export const AppRouter: React.FC = () => {
   const dispatch = useAppDispatch();
 
@@ -23,8 +24,11 @@ export const AppRouter: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={pagesPath.dashboard.url} element={protectedLayout}></Route>
-        <Route path={pagesPath.login.url} element={<>Login</>} />
+        <Route path={pagesPath.dashboard.url} element={protectedLayout}>
+          <Route path={pagesPath.dashboard.url} element={<HomePage />} />
+        </Route>
+        <Route path={pagesPath.login.url} element={<LoginPage />} />
+        <Route path={pagesPath.register.url} element={<SignUpPage />} />
       </Routes>
     </BrowserRouter>
   );

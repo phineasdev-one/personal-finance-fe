@@ -5,7 +5,6 @@ interface ApiRequest {}
 interface ApiResponse {}
 interface ApiParams {}
 
-/** Request options */
 type RequestOptions<P extends ApiParams> = {
   params?: P;
   cancelToken?: CancelToken;
