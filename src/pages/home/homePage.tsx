@@ -1,27 +1,25 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { CreditCard, HandCoins, Wallet } from "lucide-react";
+import { Stats, Transaction } from "@/components/pages";
+import { Label } from "@/components/ui/label";
+import { BadgeDollarSign, BanknoteArrowDown, BanknoteArrowUp } from "lucide-react";
 
 const stats = [
   {
     title: "Total Balance",
-    value: "$91,100",
-    icon: <CreditCard className='text-white' size={24} />,
-    bgColor: "bg-violet-500",
-    desc: "Overall total balance",
+    value: 91000,
+    icon: <BadgeDollarSign className='text-muted-foreground' size={32} strokeWidth={1} />,
+    desc: "Remaining after income and expenses",
   },
   {
     title: "Total Income",
-    value: "$98,200",
-    icon: <Wallet className='text-white' size={24} />,
-    bgColor: "bg-orange-500",
-    desc: "Overall total income",
+    value: 98000,
+    icon: <BanknoteArrowUp className='text-muted-foreground' size={32} strokeWidth={1} />,
+    desc: "All recorded earnings",
   },
   {
     title: "Total Expenses",
-    value: "$7,100",
-    icon: <HandCoins className='text-white' size={24} />,
-    bgColor: "bg-red-500",
-    desc: "Overall total expenses",
+    value: 71000,
+    icon: <BanknoteArrowDown className='text-muted-foreground' size={32} strokeWidth={1} />,
+    desc: "All outgoing payments",
   },
 ];
 
@@ -29,26 +27,21 @@ const HomePage = () => {
   return (
     <div>
       <div className='pt-6'>
-        <h2 className='text-xl font-semibold'>Dashboard</h2>
-        <span className='text-sm'>Monitor your financial activities</span>
+        <h2 className='text-2xl font-bold'>Dashboard</h2>
+        <Label className='text-sm font-light'>Monitor your financial activities</Label>
       </div>
 
       <div className='grid grid-cols-1 md:grid-cols-3 gap-4 py-6'>
         {stats.map((stat, index) => (
-          <Card key={index} className='flex items-center p-4 rounded-xl flex-row'>
-            <div className={`p-3 rounded-full ${stat.bgColor} mr-4`}>{stat.icon}</div>
-            <CardContent className='p-0'>
-              <p className='text-sm text-gray-500'>{stat.title}</p>
-              <p className='text-xl font-semibold'>{stat.value}</p>
-              <span className='text-sm text-gray-500'>{stat.desc}</span>
-            </CardContent>
-          </Card>
+          <Stats title={stat.title} description={stat.desc} amount={stat.value} icon={stat.icon} key={index} />
         ))}
       </div>
 
-      <div className='overview'>
-        <div className='recent-transaction'></div>
-        <div className='sumary'></div>
+      <div className='flex flex-col gap-2 md:flex-row'>
+        <div className='sm:flex-1'>
+          <Transaction />
+        </div>
+        <div className='sm:flex-1'>Summary</div>
       </div>
     </div>
   );
