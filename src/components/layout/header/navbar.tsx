@@ -1,6 +1,3 @@
-import { Link } from "react-router-dom";
-import { buttonVariants } from "../../ui/button";
-import { GithubIcon, LinkedinIcon } from "lucide-react";
 import LeftBar from "./leftBar";
 import NavMenu from "./navMenu";
 import Logo from "./logo";
@@ -10,9 +7,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
@@ -26,7 +21,7 @@ const NavBar = () => {
             <div className='sm:flex hidden'>
               <Logo />
             </div>
-            <div className='lg:flex hidden items-center gap-4 text-sm font-medium text-muted-foreground'>
+            <div className='md:flex hidden items-center gap-4 text-sm font-medium text-muted-foreground'>
               <NavMenu />
             </div>
           </div>
