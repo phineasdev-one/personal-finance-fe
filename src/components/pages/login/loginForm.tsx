@@ -45,14 +45,14 @@ const LoginForm = () => {
               </div>
             </div>
           </form>
-          <div className='relative hidden bg-[#FFFDE7] md:block'>
+          <div className='relative hidden bg-land md:block'>
             <img
               src={images.loginImage}
               alt='Image'
               className='absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale'
             />
           </div>
-        </CardContent> 
+        </CardContent>
       </Card>
       <div className='text-balance text-center text-xs text-muted-foreground [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-primary'>
         By clicking continue, you agree to our <a href='#'>Terms of Service</a> and <a href='#'>Privacy Policy</a>.

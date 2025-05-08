@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const Logo = () => {
   return (
-    <Link to='/' className='flex items-center gap-2.5'>
-      <DollarSign className='w-6 h-6 text-muted-foreground' strokeWidth={3} size={32} />
+    <Link to='/' className='flex items-center'>
+      <DollarSign className='h-6 text-muted-foreground w-fit' strokeWidth={3} size={32} />
       <h2 className='text-xl font-bold font-code'>
-        Monthly<span className='text-[#51D289]'>Budget</span>
+        Monthly<span className='text-money'>Budget</span>
       </h2>
     </Link>
   );
