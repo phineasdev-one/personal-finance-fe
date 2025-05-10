@@ -1,11 +1,14 @@
 export const pagesPath = {
   dashboard: {
-    url: '/',
+    url: "/",
   },
   login: {
-    url: '/login',
+    url: "/login",
   },
   register: {
-    url: '/sign-up',
+    url: "/sign-up",
+  },
+  tranasction: {
+    url: "/transaction",
   },
 };

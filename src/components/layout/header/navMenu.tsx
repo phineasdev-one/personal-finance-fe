@@ -1,13 +1,14 @@
 import { FC } from "react";
 import { SheetClose } from "../../ui/sheet";
 import Anchor from "./anchor";
+import { pagesPath } from "@/utils/path";
 
 type Props = {
   isSheet?: boolean;
 };
 
 const paths = [
-  { name: "Transaction", url: "/transaction" },
+  { name: "Transaction", url: pagesPath.tranasction.url },
   { name: "Tracking", url: "/tracking" },
 ];
 
