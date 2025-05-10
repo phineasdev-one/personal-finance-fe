@@ -1,4 +1,4 @@
-import { FianancialOverview, Stats, Transaction, TransactionChart } from "@/components/pages";
+import { FinancialOverview, Stats, Transaction, TransactionChart } from "@/components/pages";
 import { Label } from "@/components/ui/label";
 import { BadgeDollarSign, BanknoteArrowDown, BanknoteArrowUp } from "lucide-react";
 
@@ -42,7 +42,7 @@ const HomePage = () => {
           <Transaction />
         </div>
         <div className='sm:flex-1'>
-          <FianancialOverview />
+          <FinancialOverview />
         </div>
       </div>
 

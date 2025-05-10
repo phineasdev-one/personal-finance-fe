@@ -42,7 +42,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-const FianancialOverview = () => {
+const FinancialOverview = () => {
   const totalVisitors = useMemo(() => {
     return chartData.reduce((acc, curr) => acc + curr.value, 0);
   }, []);
@@ -88,4 +88,4 @@ const FianancialOverview = () => {
   );
 };
 
-export default FianancialOverview;
+export default FinancialOverview;

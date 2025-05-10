@@ -6,7 +6,7 @@ const MainLayout = () => {
   return (
     <>
       <Navbar />
-      <main className='sm:container mx-auto w-[90vw] h-auto scroll-smooth'>
+      <main className='sm:container mx-auto w-[90vw] h-auto scroll-smooth min-h-[calc(100vh_-_64px_-_64px)]'>
         <Outlet />
       </main>
       <Footer />
