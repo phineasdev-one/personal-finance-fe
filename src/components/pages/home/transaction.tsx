@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import TransactionItem from "./transactionItem";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/shadcn";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { TransactionType } from "@/types/transaction";

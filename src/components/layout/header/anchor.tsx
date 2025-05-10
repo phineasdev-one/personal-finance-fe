@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/shadcn";
 import { ComponentProps } from "react";
 import { Link, useLocation } from "react-router-dom";
 
