@@ -1,6 +1,6 @@
 import { Card, CardHeader } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/shadcn";
 import { TransactionType } from "@/types/transaction";
 import { formatDateTimeStamp } from "@/utils/dateTime";
 import { formatPrice } from "@/utils/price";

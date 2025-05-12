@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/shadcn";
 import { pagesPath } from "@/utils/path";
 import { DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";

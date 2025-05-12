@@ -10,7 +10,7 @@ type Props = {
 const paths = [
   { name: "Monthly activity", url: pagesPath.monthlyBudget.url },
   { name: "Tracking", url: "/tracking" },
-  { name: "Tracking", url: "/tracking" },
+  { name: "Transaction", url: pagesPath.transaction.url },
 ];
 
 const NavMenu: FC<Props> = ({ isSheet = false }) => {

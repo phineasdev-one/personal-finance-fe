@@ -1,7 +1,7 @@
 import { Card, CardHeader } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
-import { cn } from "@/lib/utils";
 import { formatPrice } from "@/utils/price";
+import { cn } from "@/utils/shadcn";
 import { TrendingUp } from "lucide-react";
 import { FC } from "react";
 

@@ -1,5 +1,5 @@
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
+import { cn } from "@/utils/shadcn";
 import { formatPrice } from "@/utils/price";
 import { TrendingUpIcon } from "lucide-react";
 import { FC, JSX } from "react";
